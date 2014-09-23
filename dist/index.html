@@ -11,10 +11,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="stylesheet" href="css/thin.min.css">
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/fontawesome/4.2.0/css/font-awesome.min.css">
 
         <style>
         .demo-container span { background-color: #d9d9d9; display: block; padding: .4em .8em; border-radius: 2px; font-size: 85%; }
         .demo-container span:hover { background-color: #e6e6e6 }
+        .button .fa { font-size: 1.3em; }
         </style>
 
         <!--[if lt IE 9]>
@@ -34,6 +36,7 @@
               
               <ul>
                 <li><a href="#">Base</a></li>
+                <li><a href="#">Typography</a></li>
                 <li><a href="#">Grid</a></li>
                 <li><a href="#">Buttons</a></li>
                 <li><a href="#">Forms</a></li>
@@ -54,11 +57,31 @@
                 href="#">collaboration page</a> in the GitHub repository wiki.</p>
 
               <h2>Base</h2>
-
               <p>Base is a reset, namely <a
               href="http://necolas.github.io/normalize.css/">Normalize</a>,
               aswell as some Skeleton-based defaults for your links, lists and
               images.</p>
+
+              <h2>Typography</h2>
+              <p>A base typography for your headings, paragraphs and
+              blockquotes. All styles are in <code>ems</code> so if you feel
+              like making the text bigger, remember you can make so in the
+              container and all child elements will follow.</p>
+
+              <p>
+                <h1>Heading 1</h1>
+                <h2>Heading 2</h2>
+                <h3>Heading 3</h3>
+                <h4>Heading 4</h4>
+                <h5>Heading 5</h5>
+              </p>
+
+              <p>
+              <blockquote>
+                <p>A person who never made a mistake never tried anything new.</p>
+                <cite>Albert Einstein</cite>
+              </blockquote>
+              </p>
 
               <h2>Grid</h2>
               <p>Grids are really simple to use! They are no more than <code>row</code> divs inside a
@@ -308,12 +331,22 @@
               want to use the responsive features.</p>
 
               <h2>Download</h2>
-              <p>If you want to get the latest version, it's a good idea to get it
-              from the GitHub repo.</p>
+              <p>The fastest and easiest way to use Thin is though a
+              <strong>CDN</strong>, for this you can use rawgit!</p>
+
+              <pre>
+                <code>
+                  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.rawgit.com/gosukiwi/thin/master/dist/css/thin.min.css&quot;&gt;<br/>
+                </code>
+              </pre>
+
+              <p>If you want to download the latest version, you can get it at the GitHub repo.</p>
 
               <p><a class="button" target="_blank"
-              href="https://github.com/gosukiwi/thin/tree/master/dist/css">GitHub
-          Repository</a></p>
+              href="https://github.com/gosukiwi/thin/tree/master/dist/css">
+                <i class="fa fa-github"></i> GitHub Repository
+              </a></p>
+
             </div>
           </div>
         </div>

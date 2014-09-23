@@ -547,8 +547,11 @@ code {
 }
 /**
 * typography.less
-* base typography for any website
+* base typography for any website, based on Skeleton but converted all pixels to
+* ems.
 */
+/* the base font-size for the body is 14px, make it a bit smaller than 16px
+ * which is the base for most browsers */
 body {
   background: #fff;
   font: 14px/21px 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -563,6 +566,8 @@ h6 {
   color: #181818;
   font-family: 'Georgia', 'Times New Roman', serif;
   font-weight: normal;
+  line-height: 1.142857em;
+  margin-bottom: .285714em;
 }
 h1 a,
 h2 a,
@@ -573,45 +578,35 @@ h6 a {
   font-weight: inherit;
 }
 h1 {
-  font-size: 46px;
-  line-height: 50px;
-  margin-bottom: 14px;
+  font-size: 3.285414em;
 }
 h2 {
-  font-size: 35px;
-  line-height: 40px;
-  margin-bottom: 10px;
+  font-size: 2.5em;
 }
 h3 {
-  font-size: 28px;
-  line-height: 34px;
-  margin-bottom: 8px;
+  font-size: 2em;
 }
 h4 {
-  font-size: 21px;
-  line-height: 30px;
-  margin-bottom: 4px;
+  font-size: 1.5em;
 }
 h5 {
-  font-size: 17px;
-  line-height: 24px;
+  font-size: 1.214285em;
 }
 h6 {
-  font-size: 14px;
-  line-height: 21px;
+  font-size: 1em;
 }
 .subheader {
   color: #777;
 }
 p {
-  margin: 0 0 20px 0;
+  margin: 0 0 1.428571em 0;
 }
 p img {
   margin: 0;
 }
 p.lead {
-  font-size: 21px;
-  line-height: 27px;
+  font-size: 1.5em;
+  line-height: 1.285714em;
   color: #777;
 }
 em {
@@ -626,19 +621,19 @@ small {
 }
 blockquote,
 blockquote p {
-  font-size: 17px;
-  line-height: 24px;
+  font-size: 1.1em;
+  line-height: 1.411764em;
   color: #777;
   font-style: italic;
 }
 blockquote {
-  margin: 0 0 20px;
-  padding: 9px 20px 0 19px;
+  margin: 0 0 1.176470em;
+  padding: .5em 1.2em 0 1.1em;
   border-left: 1px solid #ddd;
 }
 blockquote cite {
   display: block;
-  font-size: 12px;
+  font-size: .8em;
   color: #555;
 }
 blockquote cite:before {
@@ -671,10 +666,10 @@ input[type='email'],
 textarea,
 select {
   border: 1px solid #ccc;
-  padding: 6px 4px;
+  padding: .45em .333334em;
   outline: none;
   border-radius: 2px;
-  font: 13px 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: .928571em 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #777;
   margin: 0;
   width: 210px;
@@ -702,12 +697,12 @@ label,
 legend {
   display: block;
   font-weight: bold;
-  font-size: 13px;
+  font-size: .928571em;
 }
 label span,
 legend span {
   font-weight: normal;
-  font-size: 13px;
+  font-size: 1em;
   color: #444;
 }
 input[type='checkbox'] {
