@@ -1,0 +1,31 @@
+/**
+* forms.less
+* Button styles, based on PureCSS
+*/
+
+.button,
+button {
+  background-color: #d9d9d9;
+  padding: .4em .8em;
+  border: none rgba(0, 0, 0, 0);
+  border-radius: 2px;
+  text-decoration: none;
+
+  &::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+  }
+
+  &:hover,
+  &:focus {
+    background-image: linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.10));
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:active {
+    box-shadow: 0 0 0 1px rgba(0,0,0, 0.15) inset, 0 0 6px rgba(0,0,0, 0.20) inset;
+  }
+}

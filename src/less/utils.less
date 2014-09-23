@@ -1,0 +1,33 @@
+/**
+* utils.less
+* generic classes you can use in your markup for overall goodies
+*/
+
+/**
+* Just add "clearfix" to your element's classes to magically clear all floats
+*/
+.clearfix {
+  zoom: 1;
+
+  &:after,
+  &:before {
+    content: '\0020';
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+/**
+* Any element with a hidden attribute or class must be hidden
+*/
+[hidden],
+.hidden {
+  display: none;
+}

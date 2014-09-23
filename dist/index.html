@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/thin.min.css">
+
+        <style>
+        .demo-container span { background-color: #d9d9d9; display: block; padding: .4em .8em; border-radius: 2px; font-size: 85%; }
+        .demo-container span:hover { background-color: #e6e6e6 }
+        </style>
+
+        <!--[if lt IE 9]>
+            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+            <script>window.html5 || document.write('<script src="js/vendor/html5shiv.js"><\/script>')</script>
+        <![endif]-->
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="container">
+          <div class="row">
+            <div class="two columns">
+              <h2>Thin</h2>
+              
+              <ul>
+                <li><a href="#">Base</a></li>
+                <li><a href="#">Grid</a></li>
+                <li><a href="#">Buttons</a></li>
+                <li><a href="#">Forms</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Download</a></li>
+              </ul>
+            </div>
+
+            <div class="ten columns">
+              <h1>Thin</h1>
+
+              <p><strong>Thin</strong> is a minimal modern CSS framework designed to not get in
+              your way. It provides only the absolute base for your project, no
+              bloat! It's mostly based on <a
+                href="http://www.getskeleton.com/" target="_blank">Skeleton</a> and created using
+              <strong>LESS</strong> and <strong>Gulp</strong>, if you are a
+              developer and want to colaborate, please see the <a
+                href="#">collaboration page</a> in the GitHub repository wiki.</p>
+
+              <h2>Base</h2>
+
+              <p>Base is a reset, namely <a
+              href="http://necolas.github.io/normalize.css/">Normalize</a>,
+              aswell as some Skeleton-based defaults for your links, lists and
+              images.</p>
+
+              <h2>Grid</h2>
+              <p>Grids are really simple to use! They are no more than <code>row</code> divs inside a
+              container. You can use Thin's containers or create your own. What's nice about the grid is that it's
+              <strong>responsive</strong>, go ahead, resize the browser and see
+              how the grid nicely stacks!</p>
+
+              <div class="demo-container">
+                <div class="row">
+                  <div class="twelve columns">
+                    <span>12</span>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="one column">
+                    <span>1</span>
+                  </div>
+                  <div class="eleven columns">
+                    <span>11</span>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="two columns">
+                    <span>2</span>
+                  </div>
+                  <div class="ten columns">
+                    <span>10</span>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="three columns">
+                    <span>3</span>
+                  </div>
+                  <div class="nine columns">
+                    <span>9</span>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="four columns">
+                    <span>4</span>
+                  </div>
+                  <div class="eight columns">
+                    <span>8</span>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="five columns">
+                    <span>5</span>
+                  </div>
+                  <div class="seven columns">
+                    <span>7</span>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="six columns">
+                    <span>6</span>
+                  </div>
+                  <div class="six columns">
+                    <span>6</span>
+                  </div>
+                </div>
+              </div>
+
+              <h3>Offsets</h3>
+              <p>You can also use offsets to be able to create more complicated 
+              designs.</p>
+
+              <div class="fluid-container demo-container">
+                <div class="row">
+                  <div class="twelve columns">
+                    <span>12</span>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="eleven columns offset-by-one">
+                    <span>eleven columns offset-by-one</span>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="ten columns offset-by-two">
+                    <span>ten columns offset-by-two</span>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="nine columns offset-by-three">
+                    <span>nine columns offset-by-three</span>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="eight columns offset-by-four">
+                    <span>eight columns offset-by-four</span>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="seven columns offset-by-five">
+                    <span>seven columns offset-by-five</span>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="six columns offset-by-six">
+                    <span>six columns offset-by-six</span>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="ten columns offset-by-one">
+                    <span>ten columns offset-by-one</span>
+                  </div>
+                  <div class="one column">
+                    <span>1</span>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="eight columns offset-by-two">
+                    <span>eight columns offset-by-two</span>
+                  </div>
+                  <div class="two columns">
+                    <span>2</span>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="six columns offset-by-three">
+                    <span>six columns offset-by-three</span>
+                  </div>
+                  <div class="three columns">
+                    <span>3</span>
+                  </div>
+                </div>
+              </div>
+
+              <h3>Embedding Grids</h3>
+              <p>You can even embed a grid inside a grid! Gridception!</p>
+
+              <div class="fluid-container demo-container">
+                <div class="row">
+                  <div class="six columns">
+
+                    <div class="fluid container">
+                      <div class="row">
+                        <div class="six columns">
+                          <span>6</span>
+                        </div>
+
+                        <div class="six columns">
+                          <span>6</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="six columns">
+                    <span>6</span>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="six columns">
+
+                    <div class="fluid container">
+                      <div class="row">
+                        <div class="six columns">
+                          <div class="fluid container">
+                            <div class="row">
+                              <div class="six columns">
+                                <span>6</span>
+                              </div>
+
+                              <div class="six columns">
+                                <span>6</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="six columns">
+                          <span>6</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="six columns">
+                    <span>6</span>
+                  </div>
+                </div>
+              </div>
+
+              <p>That's pretty much it for grids! If you want to know more
+              please see the <a href="#">wiki
+              page</a> in the GitHub repository, it explains how rows work and
+              what containers need to provide.</p>
+
+              <h2>Buttons</h2>
+              <p>There's a <code>button</code> class which you can use to 
+              display nice and gently-rounded buttons. This applies
+              automatically to all button elements aswell.</p>
+
+              <p>
+                <button>I'm a button</button>
+              </p>
+
+              <p>To change the color simply add a new class to your element and
+              set the <code>background-color</code> as desired.</p>
+
+              <h2>Forms</h2>
+              <p>Thin also provides some base styles for your forms.</p>
+
+              <form action="">
+                <label for="">Name</label>
+                <input type="text" placeholder="Name">
+
+                <label for="">Email</label>
+                <input type="email" placeholder="Name">
+
+                <textarea id="" name="" cols="30" rows="10"></textarea>
+                <button type="submit">Submit</button>
+              </form>
+
+              <h2>Support</h2>
+              <p>Thin has been tested in the following browsers:</p>
+
+              <ul class="square">
+                <li>Latest Chrome</li>
+                <li>Latest Firefox</li>
+                <li>Latest Safari</li>
+                <li>IE 8+</li>
+                <li>Android 4+</li>
+                <li>Windows Phone IE 11</li>
+              </ul>
+
+              <p>Note that some old browsers like IE 8 which don't support media
+              queries will need some extra polyfill/conditional comment if you 
+              want to use the responsive features.</p>
+            </div>
+          </div>
+        </div>
+    </body>
+</html>
