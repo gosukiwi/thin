@@ -545,6 +545,10 @@ code {
   padding-bottom: .2em;
   font-size: 95%;
 }
+pre,
+code {
+  font: 12px Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+}
 /**
 * typography.less
 * base typography for any website, based on Skeleton but converted all pixels to
