@@ -11,8 +11,8 @@ var csscomb = require('gulp-csscomb');
 var cssmin = require('gulp-minify-css');
 
 var paths = {
-  less: 'src/less/**/*.less',
-  lessMain: 'src/less/thin.less',
+  less: 'less/**/*.less',
+  lessMain: 'less/thin.less',
 };
 
 gulp.task('less', function() {
@@ -29,11 +29,11 @@ gulp.task('less', function() {
       'Opera >= 12',
       'Safari >= 6']))
     .pipe(csscomb())
-    .pipe(gulp.dest('dist/css'))
+    .pipe(gulp.dest('css'))
     // Minified version
     .pipe(concat('thin.min.css'))
     .pipe(cssmin())
-    .pipe(gulp.dest('dist/css'))
+    .pipe(gulp.dest('css'))
     .pipe(reload({ stream: true }));
 });
 
@@ -41,7 +41,7 @@ gulp.task('less', function() {
 gulp.task('watch', function() {
   browserSync({
     server: {
-      baseDir: 'dist'/*,
+      baseDir: 'test'/*,
       host: '0.0.0.0'*/
     }
   });
