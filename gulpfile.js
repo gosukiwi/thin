@@ -41,8 +41,7 @@ gulp.task('less', function() {
 gulp.task('watch', function() {
   browserSync({
     server: {
-      baseDir: 'test'/*,
-      host: '0.0.0.0'*/
+      baseDir: ['css/', 'test/']
     }
   });
 
