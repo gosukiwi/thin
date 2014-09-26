@@ -13,7 +13,13 @@ var cssmin = require('gulp-minify-css');
 var paths = {
   less: 'less/**/*.less',
   lessMain: 'less/thin.less',
+  html: 'test/**/*',
 };
+
+gulp.task('html', function () {
+  return gulp.src(paths.html)
+    .pipe(reload({ stream: true }));
+});
 
 gulp.task('less', function() {
   return gulp.src(paths.lessMain)
@@ -46,6 +52,7 @@ gulp.task('watch', function() {
   });
 
   gulp.watch(paths.less, ['less']);
+  gulp.watch(paths.html, ['html']);
 });
 
 // The default task (called when you run `gulp` from cli)

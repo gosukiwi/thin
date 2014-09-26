@@ -6,25 +6,29 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Thin Tests</title>
+        <title>Grid Test</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="stylesheet" href="thin.css">
+
+        <style>
+        body { padding-top: 20px; }
+        .menu { position: fixed; }
+        .demo-container span { background-color: #d9d9d9; display: block; padding: .4em .8em; border-radius: 2px; font-size: 85%; }
+        .demo-container span:hover { background-color: #e6e6e6 }
+        .button .fa { font-size: 1.3em; }
+        .code-example { margin: 10px 0; color: #555; font-size: 85%; display: inline-block; }
+        @media screen and (max-width: 959px) { .menu { position: static; text-align: center; } }
+        </style>
     </head>
     <body>
 
       <div class="container">
         <div class="row">
           <div class="twelve columns">
-            <h1>Thin Tests</h1>
-
-            <ul class="square">
-              <li><a href="grids.html">Grids Simple</a></li>
-              <li><a href="buttons.html">Buttons Simple</a></li>
-              <li><a href="typography.html">Typography Simple</a></li>
-              <li><a href="forms.html">Forms Simple</a></li>
-            </ul>
+            <a class="button" href="#">Hello</a>
+            <button>World</button>
           </div>
         </div>
       </div>
