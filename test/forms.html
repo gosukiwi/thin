@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Forms Test</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="thin.css">
+
+        <style>
+        body { padding-top: 20px; }
+        .back { text-align: right; margin-top: 20px; }
+        </style>
+    </head>
+    <body>
+
+      <div class="container">
+        <div class="row">
+          <div class="twelve columns">
+
+            <form action="">
+              <label for="user">Username</label>
+              <input type="text" placeholder="Username" id="user">
+
+              <label for="pass">Password</label>
+              <input type="password" id="pass">
+
+              <label for="email">Email</label>
+              <input type="password" id="email">
+
+              <label for="select">Select</label>
+              <select id="select" name="">
+                <option value="1">1</option>
+                <option value="2">2</option>
+              </select>
+
+              <label for="content">Content</label>
+              <textarea id="content" name="content" rows="10"></textarea>
+
+              <label for="remember">
+                  <input id="remember" type="checkbox"> 
+                  <span>Remember me</span>
+              </label>
+
+              <fieldset>
+                <label for="">Radio Buttons</label>
+
+                <label for="option-two" class="pure-radio">
+                  <input id="option-two" type="radio" name="optionsRadios" value="option1" checked>
+                  <span>Here's a radio button. You can choose this one..</span>
+                </label>
+
+                <label for="option-three" class="pure-radio">
+                  <input id="option-three" type="radio" name="optionsRadios" value="option2">
+                  <span>..Or this one!</span>
+                </label>
+              </fieldset>
+
+              <button type="submit">Submit</button>
+            </form>
+
+            <div class="back"><a href="/">Go Back</a></div>
+
+          </div>
+        </div>
+      </div>
+
+    </body>
+</html>

@@ -29,5 +29,18 @@
 */
 [hidden],
 .hidden {
-  display: none;
+  /* always hide, thus override other more-specific rules */
+  display: none !important;
+}
+
+/**
+* Display an element in full width
+*/
+.full-width {
+  display: block;
+  /* make 100% width and override other more-specific rules */
+  width: 100% !important;
+  /* use border-box if not using it already, so paddings don't mess up with the 
+   * width, making it actually bigger than 100% */
+  box-sizing: border-box;
 }

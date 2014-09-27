@@ -8,7 +8,8 @@
 *  - 12 columns responsive grid system
 *  - nice-looking typography settings
 *  - pretty form styles
-*  - generic utility classes you can use in your markup, such as clearfix and hidden
+*  - generic utility classes you can use in your markup, such as clearfix,
+*    hidden and full-width.
 *
 * compatibility: IE 8+, Chrome 10.0+, Firefox 29.0+, Safari 5.1+, Opera 9.5
 * inspired mostly by Skeleton <http://www.getskeleton.com/> and PureCSS
@@ -676,19 +677,18 @@ select {
   font: .928571em 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #777;
   margin: 0;
-  width: 210px;
+  width: 220px;
   max-width: 100%;
   display: block;
   margin-bottom: 20px;
   background: #fff;
-}
-select {
-  padding: 0;
-  width: 220px;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
 }
 input[type='text']:focus,
 input[type='password']:focus,
 input[type='email']:focus,
+select:focus,
 textarea:focus {
   border: 1px solid #aaa;
   color: #444;
@@ -881,11 +881,14 @@ input[type='checkbox'] {
 .button,
 button {
   background-color: #e6e6e6;
-  padding: .4em .8em;
+  padding: .5em 1em;
   border: none rgba(0, 0, 0, 0);
   border-radius: 2px;
   text-decoration: none;
   line-height: normal;
+  text-align: center;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
 }
 .button::-moz-focus-inner,
 button::-moz-focus-inner {
@@ -934,5 +937,18 @@ button:active {
 */
 [hidden],
 .hidden {
-  display: none;
+  /* always hide, thus override other more-specific rules */
+  display: none !important;
+}
+/**
+* Display an element in full width
+*/
+.full-width {
+  display: block;
+  /* make 100% width and override other more-specific rules */
+  width: 100% !important;
+  /* use border-box if not using it already, so paddings don't mess up with the 
+   * width, making it actually bigger than 100% */
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
 }

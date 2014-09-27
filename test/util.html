@@ -6,26 +6,35 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Thin Tests</title>
+        <title>Util Test</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="stylesheet" href="thin.css">
+
+        <style>
+        body { padding-top: 20px; }
+        .back { text-align: right; margin-top: 20px; }
+        </style>
     </head>
     <body>
 
       <div class="container">
         <div class="row">
           <div class="twelve columns">
-            <h1>Thin Tests</h1>
 
-            <ul class="square">
-              <li><a href="grids.html">Grids</a></li>
-              <li><a href="buttons.html">Buttons</a></li>
-              <li><a href="typography.html">Typography</a></li>
-              <li><a href="forms.html">Forms</a></li>
-              <li><a href="util.html">Util</a></li>
-            </ul>
+            <h3>hidden</h3>
+            <p>The items below should be hidden.</p>
+            <input type="text" class="hidden">
+            <input type="text" hidden>
+
+            <h3>full-width</h3>
+            <p>The elements below should be 100% width.</p>
+            <input type="text" class="full-width" placeholder="Input...">
+            <a class="button full-width" href="#">I'm a button</a>
+
+            <div class="back"><a href="/">Go Back</a></div>
+
           </div>
         </div>
       </div>
