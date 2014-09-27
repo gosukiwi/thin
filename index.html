@@ -655,7 +655,7 @@
 
  $('code.html').each(function (i, el) {
    var $el = $(el);
-   $el.text($el.html().trim());
+   $el.text($el.html());
    hljs.highlightBlock(el);
  });
 
