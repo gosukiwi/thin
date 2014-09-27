@@ -655,7 +655,7 @@
 
  $('code.html').each(function (i, el) {
    var $el = $(el);
-   $el.text($el.html());
+   $el.text($el.html().trim());
    hljs.highlightBlock(el);
  });
 
@@ -664,7 +664,7 @@
 
    var example = $(this).data('example');
    var $container = $('.code-' + example);
-   $container.toggle('slideDown');
+   $container.toggleClass('hidden');
  });
 
 })(jQuery);
