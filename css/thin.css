@@ -885,7 +885,6 @@ button {
   border: none rgba(0, 0, 0, 0);
   border-radius: 2px;
   text-decoration: none;
-  display: inline-block;
   line-height: normal;
 }
 .button::-moz-focus-inner,
