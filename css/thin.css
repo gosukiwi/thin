@@ -378,6 +378,10 @@ th {
 * base.less
 * base styling for links, lists and images, based on Skeleton.
 */
+/**
+* Normalize makes sure that all elements look the same in a lot of browsers, but
+* it doesn't reset them, let's make a simple reset to work on.
+*/
 html,
 body,
 div,
@@ -466,8 +470,9 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
-/* #Links
-================================================== */
+/**
+* links
+*/
 a,
 a:visited {
   color: #333;
@@ -482,8 +487,9 @@ p a,
 p a:visited {
   line-height: inherit;
 }
-/* #Lists
-================================================== */
+/**
+* lists, pretty much like Skeleton
+*/
 ul,
 ol {
   margin-bottom: 20px;
@@ -532,19 +538,22 @@ ul.large li {
 li p {
   line-height: 21px;
 }
-/* #Images
-================================================== */
+/**
+* images
+*/
 img.responsive {
   max-width: 100%;
   height: auto;
 }
-/* Code
-================================================== */
+/**
+* code
+*/
 code {
   background-color: rgba(0, 0, 0, .04);
-  padding-top: .2em;
-  padding-bottom: .2em;
+  padding: .1em .3em;
   font-size: 95%;
+  border-radius: 2px;
+  border: 1px solid #ccc;
 }
 pre,
 code {
@@ -616,7 +625,7 @@ p.lead {
   color: #777;
 }
 /*
-* Ideally a paragraph should have around ~65 characters per line, if you want to
+* ideally a paragraph should have around ~65 characters per line, if you want to
 * foce this measure, add a "measured" class to a container, and all paragraphs
 * inside will have an according max-width to limit CPL.
 */
@@ -666,7 +675,7 @@ hr {
 }
 /**
 * forms.less
-* Base styles for forms, based on Skeleton
+* base styles for forms
 */
 form {
   margin-bottom: 20px;
@@ -683,7 +692,7 @@ select {
   padding: .45em .333334em;
   outline: none;
   border-radius: 2px;
-  font: .928571em 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: .9em 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #777;
   margin: 0;
   width: 220px;
@@ -885,7 +894,7 @@ input[type='checkbox'] {
 }
 /**
 * forms.less
-* Button styles, based on PureCSS
+* button styles, based on PureCSS
 */
 .button,
 button {
@@ -924,7 +933,7 @@ button:active {
 * generic classes you can use in your markup for overall goodies
 */
 /**
-* Just add "clearfix" to your element's classes to magically clear all floats
+* just add "clearfix" to your element's classes to magically clear all floats
 */
 .clearfix {
   zoom: 1;
@@ -942,7 +951,7 @@ button:active {
   clear: both;
 }
 /**
-* Any element with a hidden attribute or class must be hidden
+* any element with a hidden attribute or class must be hidden
 */
 [hidden],
 .hidden {
@@ -950,7 +959,7 @@ button:active {
   display: none !important;
 }
 /**
-* Display an element in full width
+* display an element in full width
 */
 .full-width {
   display: block;

@@ -2,6 +2,11 @@
 * base.less
 * base styling for links, lists and images, based on Skeleton.
 */
+
+/**
+* Normalize makes sure that all elements look the same in a lot of browsers, but
+* it doesn't reset them, let's make a simple reset to work on.
+*/
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -11,44 +16,106 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   vertical-align: baseline;
 }
 
-/* #Links
-================================================== */
-a, a:visited { color: #333; text-decoration: underline; outline: 0; }
-a:hover, a:focus { color: #000; }
-p a, p a:visited { line-height: inherit; }
+/**
+* links
+*/
+a,
+a:visited {
+  color: #333;
+  text-decoration: underline;
+  outline: 0;
+}
 
+a:hover,
+a:focus {
+  color: #000;
+}
 
-/* #Lists
-================================================== */
-ul, ol { margin-bottom: 20px; }
-ul { list-style: none outside; }
-ol { list-style: decimal; }
-ol, ul.square, ul.circle, ul.disc { margin-left: 30px; }
-ul.square { list-style: square outside; }
-ul.circle { list-style: circle outside; }
-ul.disc { list-style: disc outside; }
-ul ul, ul ol,
-ol ol, ol ul { margin: 4px 0 5px 30px; font-size: 90%;  }
-ul ul li, ul ol li,
-ol ol li, ol ul li { margin-bottom: 6px; }
-li { line-height: 18px; margin-bottom: 12px; }
-ul.large li { line-height: 21px; }
-li p { line-height: 21px; }
+p a,
+p a:visited {
+  line-height: inherit;
+}
 
-/* #Images
-================================================== */
+/**
+* lists, pretty much like Skeleton
+*/
+ul,
+ol {
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: none outside;
+}
+
+ol {
+  list-style: decimal;
+}
+
+ol,
+ul.square,
+ul.circle,
+ul.disc {
+  margin-left: 30px;
+}
+
+ul.square {
+  list-style: square outside;
+}
+
+ul.circle {
+  list-style: circle outside;
+}
+
+ul.disc {
+  list-style: disc outside;
+}
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin: 4px 0 5px 30px;
+  font-size: 90%;
+}
+
+ul ul li,
+ul ol li,
+ol ol li,
+ol ul li {
+  margin-bottom: 6px;
+}
+
+li {
+  line-height: 18px;
+  margin-bottom: 12px;
+}
+
+ul.large li {
+  line-height: 21px;
+}
+
+li p {
+  line-height: 21px;
+}
+
+/**
+* images
+*/
 img.responsive {  
   max-width: 100%;
   height: auto; 
 }
 
-/* Code
-================================================== */
+/**
+* code
+*/
 code {
   background-color: rgba(0, 0, 0, 0.04);
-  padding-top: 0.2em;
-  padding-bottom: 0.2em;
+  padding: 0.1em 0.3em;
   font-size: 95%;
+  border-radius: 2px;
+  border: 1px solid #ccc;
 }
 
 pre,
