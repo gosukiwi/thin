@@ -47,6 +47,7 @@
                   <li><a href="#grid">Grid</a></li>
                   <li><a href="#buttons">Buttons</a></li>
                   <li><a href="#forms">Forms</a></li>
+                  <li><a href="#utils">Utils</a></li>
                   <li><a href="#support">Support</a></li>
                   <li><a href="#download">Download</a></li>
                 </ul>
@@ -581,6 +582,26 @@
                 </code></pre>
               </div>
 
+              <h2 id="utils">Utils</h2>
+              <p>General utilities</p>
+
+              <h3>hidden</h3>
+              <p>When an element has a hidden attribute or class, it will be
+              hidden, always.</p>
+
+              <h3>full-width</h3>
+              <p>Make an element take all horizontal space available, basically
+              100% width.</p>
+
+              <button class="full-width">I'm full width!</button>
+
+              <a href="#" class="code-example" data-example="example-6">Code Example</a>
+              <div class="hidden code-example-6">
+                <pre><code class="html">
+<button class="full-width">I'm full width!</button>
+                </code></pre>
+              </div>
+
               <h2 id="support">Support</h2>
               <p>Thin has been tested in all modern browsers, including:</p>
 
@@ -628,7 +649,7 @@
 
  $('code.html').each(function (i, el) {
    var $el = $(el);
-   $el.text($el.html());
+   $el.text($el.html().trim());
    hljs.highlightBlock(el);
  });
 
