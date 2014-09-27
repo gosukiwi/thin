@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="thin.css">
 
         <style>
-        body { padding-top: 20px; }
+        body { padding-top: 1.5em; }
         .back { text-align: right; margin-top: 20px; }
         </style>
     </head>
@@ -51,10 +51,31 @@
 
         <div class="row">
           <div class="twelve columns">
+            <h3>Paragraphs should have 65~ chacarters per line.</h3>
+
+            <div class="measured">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+              sagittis mauris eget ullamcorper suscipit. Etiam convallis nisi ac
+              nibh ultrices aliquet. Aliquam erat volutpat. Etiam ut rutrum metus.
+              Cras eleifend lacinia sapien at luctus. Nunc pretium ipsum lorem,
+              eget semper arcu ullamcorper hendrerit. Pellentesque eu pellentesque
+              lorem. Aenean imperdiet consectetur efficitur. Cras vel iaculis
+              magna. In laoreet ullamcorper dolor, feugiat convallis leo aliquet
+              eget. Etiam laoreet quam et magna cursus fringilla.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="twelve columns">
             <div class="back"><a href="/">Go Back</a></div>
           </div>
         </div>
       </div>
 
+      <script src="http://files.keyes.ie/things/baseliner/baseliner-latest.min.js"></script>
+      <script>
+window.onload = function() { baseliner = new Baseliner({ gridHeight: 21 }); }
+      </script>
     </body>
 </html>

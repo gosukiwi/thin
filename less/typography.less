@@ -21,8 +21,8 @@ h6 {
   color: #181818;
   font-family: 'Georgia', 'Times New Roman', serif;
   font-weight: normal;
-  line-height: 1.142857em;
-  margin-bottom: .285714em;
+  line-height: 1.2em;
+  margin-bottom: .3em;
 
   a {
     font-weight: inherit;
@@ -30,7 +30,7 @@ h6 {
 }
 
 h1 {
-  font-size: 3.285414em;
+  font-size: 3em;
 }
 
 h2 {
@@ -58,7 +58,8 @@ h6 {
 }
 
 p {
-  margin: 0 0 1.428571em 0;
+  margin: 0 0 1.5em 0;
+  line-height: 1.5em;
 
   img {
     margin: 0;
@@ -70,6 +71,18 @@ p {
     color: #777;
   }
 }
+
+/*
+* Ideally a paragraph should have around ~65 characters per line, if you want to
+* foce this measure, add a "measured" class to a container, and all paragraphs
+* inside will have an according max-width to limit CPL.
+*/
+.measured {
+  p {
+    max-width: 30em;
+  }
+}
+
 
 em {
   font-style: italic;
@@ -87,7 +100,7 @@ small {
 blockquote,
 blockquote p {
   font-size: 1.1em;
-  line-height: 1.411764em;
+  line-height: 1.5em;
   color: #777;
   font-style: italic;
 }
