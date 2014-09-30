@@ -1,11 +1,13 @@
 /**
 * typography.less
-* base typography for any website, based on Skeleton but converted all pixels to
-* ems.
+* set up some base typography styles.
 */
 
 /**
 * set the default font family, size, line height and colors 
+* use 100% font size so it follows browser's user configuration, most of the
+* time this is 16px.
+* also use "Helvetica Neue" if available, fall back to Helvetica, and Arial.
 */
 body {
   background: #fff;
@@ -13,6 +15,11 @@ body {
   font: 100%/1.5em "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+/**
+* Set up a nice base style with a serif font for headers, try to use "Georgia"
+* as it's optimized for screen display and installed in most systems. All
+* headers will share a 1.2em (120%) line height.
+*/
 h1,
 h2,
 h3,
@@ -25,6 +32,16 @@ h6 {
   line-height: 1.2em;
   margin-bottom: .3em;
 
+  /**
+  * optimize ligibility of headers for supported browsers, this makes the
+  * browser render fonts slowly but also enables kerning and optional ligature
+  * information defined in the font but can be quite slower for lots of text,
+  * it's safe to use it for headers, but if you want to use it for paragraphs,
+  * beware mobile might be slow.
+  * <http://css-tricks.com/almanac/properties/t/text-rendering/>
+  */
+  text-rendering: optimizeLegibility;
+
   a {
     font-weight: inherit;
   }
@@ -32,7 +49,7 @@ h6 {
 
 /**
 * set typographic scale 
-* (http://spencermortensen.com/articles/typographic-scale/)
+* <http://spencermortensen.com/articles/typographic-scale/>
 * start from "48px" for h1, as the base font-size is 16px, use (48/16)ems.
 */
 h1 {
@@ -90,10 +107,15 @@ p {
   }
 }
 
+/**
+* you should always use an appropiate font for italics and bold, not make the
+* browser turn a regular typeface into italics, as it's far from good,
+* nevertheless because Thin tries to be generic, force software generated
+* italics and bolds.
+*/
 em {
   font-style: italic;
 }
-
 strong {
   font-weight: bold;
   color: #333;
@@ -141,8 +163,7 @@ hr {
 }
 
 /*
-* nested ordered lists
-* make it so ordered lists display content as follows:
+* inside a section-list, all ordered lists are displayed as follows:
 *  1
 *   1.1
 *   1.2
@@ -151,8 +172,10 @@ hr {
 *  2
 *   2.1
 *  3
+*
+* useful for indeces and related
 */
-.index {
+.section-list {
   ol {
     /* create a new "section" counter inside each ol */
     counter-reset: section;

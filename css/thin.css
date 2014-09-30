@@ -521,7 +521,7 @@ ul ol,
 ol ol,
 ol ul {
   margin: 4px 0 5px 30px;
-  font-size: 90%;
+  font-size: 95%;
 }
 ul ul li,
 ul ol li,
@@ -562,16 +562,24 @@ code {
 }
 /**
 * typography.less
-* base typography for any website, based on Skeleton but converted all pixels to
-* ems.
+* set up some base typography styles.
 */
-/* the base font-size for the body is 14px, make it a bit smaller than 16px
- * which is the base for most browsers */
+/**
+* set the default font family, size, line height and colors 
+* use 100% font size so it follows browser's user configuration, most of the
+* time this is 16px.
+* also use "Helvetica Neue" if available, fall back to Helvetica, and Arial.
+*/
 body {
   background: #fff;
   color: #444;
   font: 100%/1.5em 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
+/**
+* Set up a nice base style with a serif font for headers, try to use "Georgia"
+* as it's optimized for screen display and installed in most systems. All
+* headers will share a 1.2em (120%) line height.
+*/
 h1,
 h2,
 h3,
@@ -583,6 +591,15 @@ h6 {
   font-weight: normal;
   line-height: 1.2em;
   margin-bottom: .3em;
+  /**
+  * optimize ligibility of headers for supported browsers, this makes the
+  * browser render fonts slowly but also enables kerning and optional ligature
+  * information defined in the font but can be quite slower for lots of text,
+  * it's safe to use it for headers, but if you want to use it for paragraphs,
+  * beware mobile might be slow.
+  * <http://css-tricks.com/almanac/properties/t/text-rendering/>
+  */
+  text-rendering: optimizeLegibility;
 }
 h1 a,
 h2 a,
@@ -593,7 +610,8 @@ h6 a {
   font-weight: inherit;
 }
 /**
-* typographic scale: http://spencermortensen.com/articles/typographic-scale/
+* set typographic scale 
+* <http://spencermortensen.com/articles/typographic-scale/>
 * start from "48px" for h1, as the base font-size is 16px, use (48/16)ems.
 */
 h1 {
@@ -638,6 +656,12 @@ p.lead {
 .measured p {
   max-width: 30em;
 }
+/**
+* you should always use an appropiate font for italics and bold, not make the
+* browser turn a regular typeface into italics, as it's far from good,
+* nevertheless because Thin tries to be generic, force software generated
+* italics and bolds.
+*/
 em {
   font-style: italic;
 }
@@ -680,8 +704,7 @@ hr {
   height: 0;
 }
 /*
-* nested ordered lists
-* make it so ordered lists display content as follows:
+* inside a section-list, all ordered lists are displayed as follows:
 *  1
 *   1.1
 *   1.2
@@ -690,13 +713,15 @@ hr {
 *  2
 *   2.1
 *  3
+*
+* useful for indeces and related
 */
-.index ol {
+.section-list ol {
   /* create a new "section" counter inside each ol */
   counter-reset: section;
   list-style-type: none;
 }
-.index li:before {
+.section-list li:before {
   counter-increment: section;
   content: counters(section, '.') ' ';
 }
@@ -932,6 +957,7 @@ input[type='checkbox'] {
 * button styles, based on PureCSS
 */
 .button,
+a.button,
 button {
   background-color: #e6e6e6;
   padding: .5em 1em;
@@ -945,23 +971,28 @@ button {
   color: inherit;
 }
 .button::-moz-focus-inner,
+a.button::-moz-focus-inner,
 button::-moz-focus-inner {
   padding: 0;
   border: 0;
 }
 .button:hover,
+a.button:hover,
 button:hover,
 .button:focus,
+a.button:focus,
 button:focus {
   background-image: -webkit-linear-gradient(transparent, rgba(0, 0, 0, .05) 40%, rgba(0, 0, 0, .1));
   background-image:         linear-gradient(transparent, rgba(0, 0, 0, .05) 40%, rgba(0, 0, 0, .1));
   text-decoration: none;
 }
 .button:focus,
+a.button:focus,
 button:focus {
   outline: 0;
 }
 .button:active,
+a.button:active,
 button:active {
   box-shadow: 0 0 0 1px rgba(0, 0, 0, .15) inset, 0 0 6px rgba(0, 0, 0, .2) inset;
 }
