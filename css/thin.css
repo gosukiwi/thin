@@ -589,7 +589,7 @@ h6 {
   color: #181818;
   font-family: 'Georgia', 'Times New Roman', serif;
   font-weight: normal;
-  line-height: 1.2em;
+  line-height: 1.25em;
   margin-bottom: .3em;
   /**
   * optimize ligibility of headers for supported browsers, this makes the
@@ -637,7 +637,7 @@ h6 {
 }
 p {
   margin: 0 0 1.5em 0;
-  line-height: 1.45em;
+  line-height: 1.5em;
 }
 p img {
   margin: 0;
