@@ -999,6 +999,7 @@ button:active {
 table {
   width: 100%;
   font-size: 95%;
+  margin-bottom: 20px;
 }
 table.bordered {
   border: 1px solid #ccc;
