@@ -996,6 +996,32 @@ a.button:active,
 button:active {
   box-shadow: 0 0 0 1px rgba(0, 0, 0, .15) inset, 0 0 6px rgba(0, 0, 0, .2) inset;
 }
+table {
+  width: 100%;
+  font-size: 95%;
+}
+table.bordered {
+  border: 1px solid #ccc;
+}
+table.condensed td,
+table.condensed th {
+  padding: 4px;
+}
+td,
+th {
+  padding: 7px;
+}
+thead {
+  text-align: left;
+  font-weight: 700;
+  border-bottom: 2px solid #ccc;
+}
+tbody tr {
+  border-bottom: 1px solid #ccc;
+}
+tbody tr:last-child {
+  border-bottom: none;
+}
 /**
 * utils.less
 * generic classes you can use in your markup for overall goodies

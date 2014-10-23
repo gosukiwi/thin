@@ -1,0 +1,36 @@
+table {
+  width: 100%;
+  font-size: 95%;
+
+  &.bordered {
+    border: 1px solid #ccc;
+  }
+
+  &.condensed {
+    td,
+    th {
+      padding: 4px;
+    }
+  }
+}
+
+td, 
+th {
+  padding: 7px;
+}
+
+thead {
+  text-align: left;
+  font-weight: 700;
+  border-bottom: 2px solid #ccc;
+}
+
+tbody {
+  tr {
+    border-bottom: 1px solid #ccc;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
