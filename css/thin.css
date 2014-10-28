@@ -560,6 +560,14 @@ pre,
 code {
   font: 12px Consolas, 'Liberation Mono', Menlo, Courier, monospace;
 }
+::-moz-selection {
+  background-color: #b3d4fd;
+  color: #444;
+}
+::selection {
+  background-color: #b3d4fd;
+  color: #444;
+}
 /**
 * typography.less
 * set up some base typography styles.
