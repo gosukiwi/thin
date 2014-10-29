@@ -489,23 +489,38 @@ p a:visited {
   line-height: inherit;
 }
 /**
-* lists, pretty much like Skeleton
-*/
-ul,
-ol {
-  margin-bottom: 20px;
+ * LISTS
+ * address margins set differently in ie 6/7.
+ */
+dl,
+menu,
+ol,
+ul {
+  margin: 1em 0;
+}
+dd {
+  margin: 0 0 0 40px;
+}
+/**
+ * address paddings set differently in ie 6/7.
+ */
+ol,
+ul {
+  padding: 0 0 0 20px;
+  margin: 0 0 20px;
+}
+ol ol,
+ul ol,
+ol ul,
+ul ul {
+  padding-left: 20px;
+  margin: 0;
 }
 ul {
   list-style: none outside;
 }
 ol {
   list-style: decimal;
-}
-ol,
-ul.square,
-ul.circle,
-ul.disc {
-  margin-left: 30px;
 }
 ul.square {
   list-style: square outside;
@@ -516,28 +531,8 @@ ul.circle {
 ul.disc {
   list-style: disc outside;
 }
-ul ul,
-ul ol,
-ol ol,
-ol ul {
-  margin: 4px 0 5px 30px;
-  font-size: 95%;
-}
-ul ul li,
-ul ol li,
-ol ol li,
-ol ul li {
-  margin-bottom: 6px;
-}
 li {
-  line-height: 18px;
-  margin-bottom: 12px;
-}
-ul.large li {
-  line-height: 21px;
-}
-li p {
-  line-height: 21px;
+  line-height: 1.7;
 }
 /**
 * images
@@ -688,7 +683,7 @@ blockquote p {
   font-style: italic;
 }
 blockquote {
-  margin: 0 0 1.176470em;
+  margin: 0 0 1.2em;
   padding: .5em 1.2em 0 1.1em;
   border-left: 1px solid #ddd;
 }
