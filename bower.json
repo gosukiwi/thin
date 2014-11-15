@@ -1,0 +1,25 @@
+{
+  "name": "thin",
+  "version": "0.0.0",
+  "homepage": "https://github.com/gosukiwi/thin",
+  "authors": [
+    "Federico Ramirez <fedekiller@gmail.com>"
+  ],
+  "description": "Minimal CSS framework for the modern web",
+  "main": "css/thin.min.css",
+  "keywords": [
+    "css",
+    "framework",
+    "less",
+    "grid",
+    "responsive"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
