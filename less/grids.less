@@ -150,6 +150,13 @@
   /* in mobile mode, all containers are fluid */
   .container {
     width: 100%;
+
+    .row:last-child {
+      .column,
+      .columns {
+        margin-bottom: 10px;
+      }
+    }
   }
 
   .one.column,

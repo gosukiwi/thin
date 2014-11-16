@@ -923,6 +923,10 @@ input[type='checkbox'] {
   .container {
     width: 100%;
   }
+  .container .row:last-child .column,
+  .container .row:last-child .columns {
+    margin-bottom: 10px;
+  }
   .one.column,
   .two.columns,
   .three.columns,
