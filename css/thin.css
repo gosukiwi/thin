@@ -804,6 +804,10 @@ input[type='checkbox'] {
 .container .container {
   margin-bottom: -10px;
 }
+.container .row:last-child .column,
+.container .row:last-child .columns {
+  margin-bottom: 0;
+}
 .row {
   /* clearing goodness */
   zoom: 1;
