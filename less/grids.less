@@ -10,6 +10,13 @@
   .container {
     margin-bottom: -10px;
   }
+
+  &:last-child {
+    .column,
+    .columns {
+      padding-bottom: 0;
+    }
+  }
 }
 
 .container.fluid {
@@ -21,13 +28,6 @@
   .clearfix;
   display: table;
   width: 100%;
-
-  &:last-child {
-    .column,
-    .columns {
-      padding-bottom: 0;
-    }
-  }
 
   .row {
     .column:last-child,
