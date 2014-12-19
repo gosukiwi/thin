@@ -799,13 +799,14 @@ input[type='checkbox'] {
 .container .container {
   margin-bottom: -10px;
 }
-.container .row:last-child .column,
-.container .row:last-child .columns {
-  margin-bottom: 0;
+.container.fluid {
+  width: 100%;
 }
 .row {
   /* clearing goodness */
   zoom: 1;
+  display: table;
+  width: 100%;
 }
 .row:after,
 .row:before {
@@ -819,6 +820,10 @@ input[type='checkbox'] {
 .row:after {
   clear: both;
 }
+.row:last-child .column,
+.row:last-child .columns {
+  padding-bottom: 0;
+}
 .row .row .column:last-child,
 .row .row .columns:last-child {
   padding-right: 0;
@@ -827,15 +832,11 @@ input[type='checkbox'] {
 .row .row .columns:first-child {
   padding-left: 0;
 }
-.container.fluid {
-  width: 100%;
-}
 .column,
 .columns {
-  float: left;
+  display: table-cell;
   box-sizing: border-box;
-  padding: 0 10px;
-  margin-bottom: 10px;
+  padding: 0 10px 10px;
 }
 .one.column {
   width: 8.3333334%;
@@ -913,13 +914,23 @@ input[type='checkbox'] {
 * Media queries
 ================================================== */
 @media screen and (max-width: 959px) {
-  /* in mobile mode, all containers are fluid */
   .container {
     width: 100%;
+  }
+  .container .row {
+    display: block;
   }
   .container .row:last-child .column,
   .container .row:last-child .columns {
     margin-bottom: 10px;
+  }
+  .container .row:last-child .column:last-child,
+  .container .row:last-child .columns:last-child {
+    margin-bottom: 0;
+  }
+  .container .row .column,
+  .container .row .columns {
+    display: block;
   }
   .one.column,
   .two.columns,

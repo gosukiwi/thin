@@ -10,18 +10,24 @@
   .container {
     margin-bottom: -10px;
   }
+}
 
-  .row:last-child {
-    .column,
-    .columns {
-      margin-bottom: 0;
-    }
-  }
+.container.fluid {
+  width: 100%;
 }
 
 .row {
   /* clearing goodness */
   .clearfix;
+  display: table;
+  width: 100%;
+
+  &:last-child {
+    .column,
+    .columns {
+      padding-bottom: 0;
+    }
+  }
 
   .row {
     .column:last-child,
@@ -36,16 +42,11 @@
   }
 }
 
-.container.fluid {
-  width: 100%;
-}
-
 .column,
 .columns {
-  float: left;
+  display: table-cell;
   box-sizing: border-box;
-  padding: 0 10px;
-  margin-bottom: 10px;
+  padding: 0 10px 10px;
 }
 
 .one.column {
@@ -147,14 +148,31 @@
 * Media queries
 ================================================== */
 @media screen and (max-width: 959px) {
-  /* in mobile mode, all containers are fluid */
+  // in mobile mode, all containers are fluid
   .container {
     width: 100%;
 
-    .row:last-child {
+    .row {
+      display: block;
+
+      // We use bottom padding on all columns in order to add a nice separation
+      // between them. Because each colum is now a row, we can no apply 0 bottom
+      // margin to all the columns inside the last row, now we only need to do it
+      // in the last column element.
+      &:last-child {
+        .column, 
+        .columns {
+          margin-bottom: 10px;
+
+          &:last-child {
+            margin-bottom: 0px;
+          }
+        }
+      }
+
       .column,
       .columns {
-        margin-bottom: 10px;
+        display: block;
       }
     }
   }
