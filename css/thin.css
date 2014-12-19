@@ -187,8 +187,7 @@ figure {
  * Address differences between Firefox and other browsers.
  */
 hr {
-  -moz-box-sizing: content-box;
-       box-sizing: content-box;
+  box-sizing: content-box;
   height: 0;
 }
 /**
@@ -294,8 +293,7 @@ input {
  */
 input[type='checkbox'],
 input[type='radio'] {
-  -moz-box-sizing: border-box;
-       box-sizing: border-box;
+  box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */
@@ -317,9 +315,8 @@ input[type='number']::-webkit-outer-spin-button {
 input[type='search'] {
   -webkit-appearance: textfield;
   /* 1 */
-  -moz-box-sizing: content-box;
   /* 2 */
-       box-sizing: content-box;
+  box-sizing: content-box;
 }
 /**
  * Remove inner padding and search cancel button in Safari and Chrome on OS X.
@@ -546,10 +543,9 @@ img.responsive {
 */
 code {
   background-color: rgba(0, 0, 0, .04);
-  padding: .1em .3em;
+  padding: .15em .3em;
   font-size: 95%;
   border-radius: 2px;
-  border: 1px solid #ccc;
 }
 pre,
 code {
@@ -763,8 +759,7 @@ select {
   display: block;
   margin-bottom: 20px;
   background: #fff;
-  -moz-box-sizing: border-box;
-       box-sizing: border-box;
+  box-sizing: border-box;
 }
 input[type='text']:focus,
 input[type='password']:focus,
@@ -838,8 +833,7 @@ input[type='checkbox'] {
 .column,
 .columns {
   float: left;
-  -moz-box-sizing: border-box;
-       box-sizing: border-box;
+  box-sizing: border-box;
   padding: 0 10px;
   margin-bottom: 10px;
 }
@@ -977,8 +971,7 @@ button {
   text-decoration: none;
   line-height: normal;
   text-align: center;
-  -moz-box-sizing: border-box;
-       box-sizing: border-box;
+  box-sizing: border-box;
   color: inherit;
 }
 .button::-moz-focus-inner,
@@ -1073,6 +1066,5 @@ tbody tr:last-child {
   width: 100% !important;
   /* use border-box if not using it already, so paddings don't mess up with the 
    * width, making it actually bigger than 100% */
-  -moz-box-sizing: border-box;
-       box-sizing: border-box;
+  box-sizing: border-box;
 }
