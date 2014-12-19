@@ -920,13 +920,12 @@ input[type='checkbox'] {
   .container .row {
     display: block;
   }
+  .container .row:last-child {
+    margin-bottom: -10px;
+  }
   .container .row:last-child .column,
   .container .row:last-child .columns {
     margin-bottom: 10px;
-  }
-  .container .row:last-child .column:last-child,
-  .container .row:last-child .columns:last-child {
-    margin-bottom: 0;
   }
   .container .row .column,
   .container .row .columns {
