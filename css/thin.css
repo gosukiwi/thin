@@ -5,7 +5,6 @@
 * thin provides the following:
 *  - normalize, a "reset" to make sure all browsers render the page in the same manner
 *  - a flat and elegant default style for all HTML elements
-*  - 12 columns responsive grid system
 *  - nice-looking typography settings
 *  - pretty form styles
 *  - generic utility classes you can use in your markup, such as clearfix,
@@ -789,185 +788,6 @@ input[type='checkbox'] {
   display: inline;
 }
 /**
-* grids.less
-* 12 columns responsive grid system.
-*/
-.container {
-  width: 960px;
-  margin: auto;
-}
-.container .container {
-  margin-bottom: -10px;
-}
-.container.fluid {
-  width: 100%;
-}
-.row {
-  /* clearing goodness */
-  zoom: 1;
-  display: table;
-  width: 100%;
-}
-.row:after,
-.row:before {
-  content: '\0020';
-  display: block;
-  overflow: hidden;
-  visibility: hidden;
-  width: 0;
-  height: 0;
-}
-.row:after {
-  clear: both;
-}
-.row:last-child .column,
-.row:last-child .columns {
-  padding-bottom: 0;
-}
-.row .row .column:last-child,
-.row .row .columns:last-child {
-  padding-right: 0;
-}
-.row .row .column:first-child,
-.row .row .columns:first-child {
-  padding-left: 0;
-}
-.column,
-.columns {
-  display: table-cell;
-  box-sizing: border-box;
-  padding: 0 10px 10px;
-}
-.one.column {
-  width: 8.3333334%;
-}
-.two.columns {
-  width: 16.6666667%;
-}
-.three.columns {
-  width: 25%;
-}
-.four.columns {
-  width: 33.333334%;
-}
-.five.columns {
-  width: 41.666667%;
-}
-.six.columns {
-  width: 50%;
-}
-.seven.columns {
-  width: 58.333334%;
-}
-.eight.columns {
-  width: 66.666667%;
-}
-.nine.columns {
-  width: 75%;
-}
-.ten.columns {
-  width: 83.3333334%;
-}
-.eleven.columns {
-  width: 91.6666667%;
-}
-.twelve.columns {
-  width: 100%;
-}
-/**
-* Offsets
-*---------------------------------------------------------------------------*/
-.offset-by-one {
-  margin-left: 8.3333334%;
-}
-.offset-by-two {
-  margin-left: 16.6666667%;
-}
-.offset-by-three {
-  margin-left: 25%;
-}
-.offset-by-four {
-  margin-left: 33.333334%;
-}
-.offset-by-five {
-  margin-left: 41.666667%;
-}
-.offset-by-six {
-  margin-left: 50%;
-}
-.offset-by-seven {
-  margin-left: 58.333334%;
-}
-.offset-by-eight {
-  margin-left: 66.666667%;
-}
-.offset-by-nine {
-  margin-left: 75%;
-}
-.offset-by-ten {
-  margin-left: 83.3333334%;
-}
-.offset-by-eleven {
-  margin-left: 91.6666667%;
-}
-/**
-* Media queries
-================================================== */
-@media screen and (max-width: 959px) {
-  .container {
-    width: 100%;
-  }
-  .container .row {
-    display: block;
-  }
-  .container .row:last-child {
-    margin-bottom: -10px;
-  }
-  .container .row:last-child .column,
-  .container .row:last-child .columns {
-    margin-bottom: 10px;
-  }
-  .container .row .column,
-  .container .row .columns {
-    display: block;
-  }
-  .one.column,
-  .two.columns,
-  .three.columns,
-  .four.columns,
-  .five.columns,
-  .six.columns,
-  .seven.columns,
-  .eight.columns,
-  .nine.columns,
-  .ten.columns,
-  .eleven.columns,
-  .twelve.columns {
-    width: 100%;
-  }
-  .offset-by-one,
-  .offset-by-two,
-  .offset-by-three,
-  .offset-by-four,
-  .offset-by-five,
-  .offset-by-six,
-  .offset-by-seven,
-  .offset-by-eight,
-  .offset-by-nine,
-  .offset-by-ten,
-  .offset-by-eleven {
-    margin-left: 0;
-  }
-  /* ALL columns inside nested rows have no padding, in desktop mode only the
-   * first child and last child have no padding either on the left or on the
-   * right */
-  .row .row .columns,
-  .row .row .column {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-/**
 * forms.less
 * button styles, based on PureCSS
 */
@@ -1077,4 +897,13 @@ tbody tr:last-child {
   /* use border-box if not using it already, so paddings don't mess up with the 
    * width, making it actually bigger than 100% */
   box-sizing: border-box;
+}
+/**
+* pull any element left or right
+*/
+.pull-right {
+  float: right;
+}
+.pull-left {
+  float: left;
 }
